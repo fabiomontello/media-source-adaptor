@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "media-source-adaptor"
 version = "0.1.0"
-description = "Adaptor to gather different streams, video or images with Python generators"
+description = "Adaptor to gather different streams, videos or images with Python generators"
 authors = ["Piero Macaluso <piero.macaluso@linksfoundation.com>, Fabio Montello <fabio.montello@linksfoundation.com>"]
 license = "MIT License"
 
