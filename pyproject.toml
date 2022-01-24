@@ -7,8 +7,9 @@ license = "MIT License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-youtube_dl = "^2021.12.17"
 opencv-python = "^4.5.5"
+youtube-dl = {git = "https://github.com/PieroMacaluso/youtube-dl"}
+# youtube_dl = "^2021.12.17"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"

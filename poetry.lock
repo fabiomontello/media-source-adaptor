@@ -158,11 +158,18 @@ description = "YouTube video downloader"
 category = "main"
 optional = false
 python-versions = "*"
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/PieroMacaluso/youtube-dl"
+reference = "master"
+resolved_reference = "c010f357da27efa5b5be6eacd20f9b068fca7db6"
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "8439a319c1e62c5b526a279218547ddb96163cffab873bd2db3f8d709cbacf56"
+content-hash = "15c556268fdb41d4486ce7092d30cf827950efff080a8654da4a31e184db152b"
 
 [metadata.files]
 atomicwrites = [
@@ -246,7 +253,4 @@ toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
-youtube-dl = [
-    {file = "youtube_dl-2021.12.17-py2.py3-none-any.whl", hash = "sha256:f1336d5de68647e0364a47b3c0712578e59ec76f02048ff5c50ef1c69d79cd55"},
-    {file = "youtube_dl-2021.12.17.tar.gz", hash = "sha256:bc59e86c5d15d887ac590454511f08ce2c47698d5a82c27bfe27b5d814bbaed2"},
-]
+youtube-dl = []
