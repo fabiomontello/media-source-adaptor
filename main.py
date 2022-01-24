@@ -1,5 +1,4 @@
-"""
-Main script to test the code
+"""Main script to test the code
 
 This script can be run with `python main.py` and it can be used as template to interact
 with the library.
