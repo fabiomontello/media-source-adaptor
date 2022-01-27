@@ -1,8 +1,8 @@
-from media_source_adaptor.common import StreamAdaptor
+import cv2
 import youtube_dl
 from youtube_dl.extractor import SkylineWebcamsIE
-import cv2
-import numpy
+
+from media_source_adaptor.common import StreamAdaptor
 
 
 class SkylineWebcam(StreamAdaptor):
