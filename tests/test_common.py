@@ -1,5 +1,6 @@
 import logging
 
+import cv2
 import pytest
 
 from media_source_adaptor.common import ImageAdaptor, VideoAdaptor
@@ -21,6 +22,7 @@ def test_video(path: str):
 
     cnt = 0
     for i, elem in enumerate(video.generator()):
+        cv2.imshow(f"Test video {path.split('/')[-1]}", elem)
         cnt = i
 
     LOG.debug(f'Number of frames read: {cnt}')
@@ -39,5 +41,6 @@ def test_video_details(path: str):
 def test_image(path: str):
     image = ImageAdaptor(path)
     img_read = image.generator()
+    cv2.imshow(f"Test image {path.split('/')[-1]}", img_read)
     LOG.debug(img_read.shape)
     assert len(img_read.shape) == 3, 'Image shape not correct'
