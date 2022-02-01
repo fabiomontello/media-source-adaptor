@@ -4,7 +4,14 @@ import cv2
 
 
 class ImageAdaptor:
-    pass
+
+    def __init__(self, image_dir: str):
+        assert os.path.isfile(image_dir), "Image not found in the directory"
+        self.capture = cv2.imread(image_dir)
+        self.capture = cv2.cvtColor(self.capture, cv2.COLOR_RGB2BGR)
+
+    def generator(self):
+        return self.capture
 
 
 class VideoAdaptor:
