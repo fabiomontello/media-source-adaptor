@@ -11,7 +11,7 @@ class ImageAdaptor:
         self.capture = cv2.cvtColor(self.capture, cv2.COLOR_RGB2BGR)
 
     def generator(self):
-        return self.capture
+        return True, self.capture
 
     def release(self):
         self.capture.release()
@@ -32,7 +32,7 @@ class VideoAdaptor:
     def generator(self):
         success, frame = self.capture.read()
         while (success):
-            yield frame
+            yield success, frame
             success, frame = self.capture.read()
 
     def details(self):
