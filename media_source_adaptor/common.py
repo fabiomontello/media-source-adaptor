@@ -13,6 +13,9 @@ class ImageAdaptor:
     def generator(self):
         return self.capture
 
+    def release(self):
+        self.capture.release()
+
 
 class VideoAdaptor:
 
@@ -34,6 +37,9 @@ class VideoAdaptor:
 
     def details(self):
         return {'fps': self.fps, 'width': self.width, 'height': self.height}
+
+    def release(self):
+        self.capture.release()
 
 
 class StreamAdaptor:
