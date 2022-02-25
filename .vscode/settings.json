@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/resources/.pyenv/shims/python",
+    "python.pythonPath": "${workspaceRoot}/.venv/bin/python",
     "python.testing.pytestArgs": [
         "${workspaceFolder}/tests"
     ],
@@ -16,7 +16,7 @@
             "source.organizeImports": true
         }
     },
-    "python.sortImports.path": "/resources/.pyenv/shims/isort",
+    "python.sortImports.path": "${workspaceRoot}/.venv/bin/isort",
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
