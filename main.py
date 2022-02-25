@@ -4,6 +4,7 @@ This script can be run with `python main.py` and it can be used as template to i
 with the library.
 """
 import cv2
+
 from media_source_adaptor.skylinewebcams import SkylineWebcam
 
 if __name__ == "__main__":
@@ -11,7 +12,7 @@ if __name__ == "__main__":
     sw = SkylineWebcam(url=url)
     print(sw.width, sw.height, sw.fps)
     cv2.namedWindow('IMG', cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)
-    for r, frame in sw.generator():
+    for _, frame in sw.generator():
         cv2.imshow("IMG", frame)
         ch = cv2.waitKey(1)
         if ch == 27 or ch == ord("q") or ch == ord("Q"):
