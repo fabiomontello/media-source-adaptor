@@ -4,7 +4,6 @@ import cv2
 
 
 class ImageAdaptor:
-
     def __init__(self, image_dir: str):
         assert os.path.isfile(image_dir), "Image not found in the directory"
         self.capture = cv2.imread(image_dir)
@@ -18,7 +17,6 @@ class ImageAdaptor:
 
 
 class VideoAdaptor:
-
     def __init__(self, video_dir: str):
 
         assert os.path.isfile(video_dir), "Video not found in the directory"
